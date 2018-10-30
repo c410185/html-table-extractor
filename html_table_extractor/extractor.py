@@ -13,7 +13,7 @@ class Extractor(object):
         if isinstance(table, Tag):
             self._table = table.find(id=id_)
         # input is str/unicode
-        elif isinstance(table, str) or isinstance(table, unicode):
+        elif isinstance(table, str):
             self._table = BeautifulSoup(table, 'html.parser').find(id=id_)
         else:
             raise Exception('unrecognized type')
